@@ -13,10 +13,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $query= "INSERT INTO userdetail (name, email, address,password) VALUES ('$username','$email', '$address', '$password')";
             $execute=mysqli_query($conn, $query);
             if($execute){
-            	echo "signup success";
-                // header("Refresh:0");
+                header("Refresh:0");
             }else{
-                echo "Not executed";
+                echo "signup failed";
             }
         }
 
@@ -37,9 +36,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $_SESSION['useraddress']=$data['address'];
             $_SESSION['usersessionid']=session_id();
             setcookie('userauth','true', time()+18000);
-            // header('location: userprofile.php');
-            echo "login success";
+            header('location: profile.php');
             
+        } else {
+            echo "login failed";
         }
        
 	}
