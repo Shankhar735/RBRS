@@ -14,9 +14,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             $_SESSION['adminname']=$data['name'];
             $_SESSION['adminsessionid']=session_id();
             setcookie('adminauth','true', time()+18000);
-            // header('location: userprofile.php');
-            echo "login success";
-            
+            header('location: admindashboard.php');
+        } else {
+            echo "admin login failed";
         }
        
   }
