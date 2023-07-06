@@ -15,6 +15,12 @@ session_start();
   <link rel="stylesheet" href="userasset/profile.css">
 </head>
 <body>
+    <nav>
+        <a href="#">Fullname</a>
+        <a href="#">adress</a>
+        <a href="#">Contact</a>
+        <a href="#">email</a>
+    </nav>
 <div class="page-content page-container" id="page-content">
     <div class="padding">
         <div class="row container d-flex justify-content-center">
