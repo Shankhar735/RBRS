@@ -1,0 +1,10 @@
+adminstrator/books/*.pdf
+adminstrator/books/*.jpg
+adminstrator/books/*.png
+adminstrator/books/*.docx
+adminstrator/books/*.webp
+adminstrator/books/BookCover/*.pdf
+adminstrator/books/BookCover/*.jpg
+adminstrator/books/BookCover/*.png
+adminstrator/books/BookCover/*.docx
+adminstrator/books/BookCover/*.webp
