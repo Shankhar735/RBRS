@@ -24,7 +24,8 @@ session_start();
                                                         <div class="col-sm-4 bg-c-lite-green user-profile">
                                                             <div class="card-block text-center text-white">
                                                                 <div class="m-b-25">
-                                                                    <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image">
+                                                                    <img src="bi" class="img-radius" alt="User-Profile-Image">
+                                                                    <img src="bible.jpg" alt="hello">
                                                                 </div>
                                                                 <h6 class="f-w-600"><?php echo $_SESSION['username']; ?></h6>
                                                                 <p>Book Reader</p>

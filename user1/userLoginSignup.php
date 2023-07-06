@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 <html>
 <head>
 	<title>user form</title>
-	<link rel="stylesheet" type="text/css" href="userasset/userLoginSignupStyle.css">
+	<link rel="stylesheet" type="text/css" href="../style/userLoginSignupStyle.css">
 </head>
 <body>
 <div class="main">  	
