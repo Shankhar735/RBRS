@@ -5,12 +5,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     if(isset($_POST['register'])){
         $email=$_POST['email'];
         $username=$_POST['name'];
-        $address = $_POST['addr'];
         $password=$_POST['pswd'];
         
         $validate=true;
         if($validate){
-            $query= "INSERT INTO userdetail (name, email, address,password) VALUES ('$username','$email', '$address', '$password')";
+            $query= "INSERT INTO users (name, email, password) VALUES ('$username','$email', '$password')";
             $execute=mysqli_query($conn, $query);
             if($execute){
                 header("Refresh:0");
@@ -25,18 +24,18 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     if(isset($_POST['login'])){
         $email=$_POST['email'];
         $password=$_POST['pswd'];
-        $query="SELECT userid, name, email, address, password from userdetail WHERE email='$email' AND password='$password'";
+        $query="SELECT id, name, email, password FROM users WHERE email='$email' AND password='$password'";
         $execute=mysqli_query($conn, $query);
         $data=mysqli_fetch_array($execute, MYSQLI_ASSOC);
         $count = mysqli_num_rows($execute);
         if($count == 1){
-            $_SESSION['userid']=$data['userid'];
-            $_SESSION['username']=$data['name'];
-            $_SESSION['useremail']=$data['email'];
-            $_SESSION['useraddress']=$data['address'];
+            $_SESSION['login'] = true;
+            $_SESSION['Id']=$data['id'];
+            $_SESSION['Name']=$data['name'];
+            $_SESSION['Email']=$data['email'];
             $_SESSION['usersessionid']=session_id();
             setcookie('userauth','true', time()+18000);
-            header('location: profile.php');
+            header('location: manage_profile.php');
             
         } else {
             echo "login failed";
@@ -70,7 +69,6 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 			<label for="chk" aria-hidden="true">Register</label>
 			<input class="input" type="text" name="name" placeholder="Username" required="">
 			<input class="input" type="email" name="email" placeholder="Email" required="">
-			<input class="input" type="text" name="addr" placeholder="Address" required="">
 			<input class="input" type="password" name="pswd" placeholder="Password" required="">
 			<input type="submit" name="register" value="register">
 		</form>
