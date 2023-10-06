@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../admin/CRUD/connection.php';
+include '../Database/connection_db.php';
 if (!isset($_SESSION['login'])) {
     header('location:../index.php');
     exit;
@@ -86,7 +86,7 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <?php
-    include '../include/profilenav.php';
+    include 'profilenav.php';
     ?>
 
     <div class="content">

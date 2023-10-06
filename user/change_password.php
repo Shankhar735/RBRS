@@ -4,7 +4,7 @@ $msg = "";
 session_start();
 $id = $_SESSION['Id'];
 
-include '../admin/CRUD/connection.php';
+include '../Database/connection_db.php';
 if (isset($_POST['submit'])) {
     $password_new = md5($_POST['pass']);
     $password_confirm = md5($_POST['passcf']);
@@ -105,7 +105,7 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <?php
-    include '../include/profilenav.php';
+    include 'profilenav.php';
     ?>
 
     <form method="post">

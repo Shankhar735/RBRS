@@ -26,7 +26,7 @@ if (!isset($_SESSION['login'])) {
         <div class="info">            
             <h2>Username: <?php echo $_SESSION['Name']; ?></h2> <br>
             <h2>Email: <?php echo $_SESSION['Email']; ?></h2><br>
-            <a href="change_profile.php">Change profile picture</a> <br>
+            
             <button onclick="location.href='logout.php'">Logout</button>
         </div>
     </div>

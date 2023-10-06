@@ -25,8 +25,8 @@
             <?php
                 }
             ?>
-            <li><a href="change_profile.php"><i class="fa-solid fa-id-card"></i>Change profile picture</a></li>
+           
             <li><a href="change_password.php"><i class="fa-solid fa-key"></i>Change password</a></li>
-            <li><a href="../lessons.php"><i class="fa-solid fa-circle-chevron-left"></i>Go Back to Lessons</a></li>
+            <li><a href="../lessons.php"><i class="fa-solid fa-circle-chevron-left"></i>Go Back to Religious book</a></li>
         </ul>
     </div>
