@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+.main {
+    background-position: center;
+    background-size: cover;
+    background-color: #240046;
+    height: 100vh;
+}
+.navbar { 
+    height: 75px;
+}
+.icon {
+    width: 212px;
+    float: left;
+    height: 70px;
+    margin-left: 150px;
+}
+.logo {
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+}
+.menu {
+    width: 400px;
+    float: left;
+    height: 70px;
+}
+ul {
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li {
+    list-style: none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+}
+ul li a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+    color: rgb(255, 255, 255);
+}
+ul li a:hover {
+    color: #d18cbe;
+}
+
+.hwrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hslide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.homebg{
+    width: 55vw;
+}
+.content{
+    display: flex;
+    justify-content: space-evenly;
+}

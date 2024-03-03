@@ -1,0 +1,66 @@
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-section, .team-section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.team-member {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.team-member img {
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+}
+This example provides a simple structure for your "About Us" page with a header, sections for your story and team members, and a footer. You can further customize the design and content as needed by modifying the HTML and CSS. Additionally, you should replace the placeholder content and images with your own organization's information and team members.
+
+
+
+
+

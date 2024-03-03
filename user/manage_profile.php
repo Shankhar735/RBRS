@@ -2,7 +2,7 @@
 session_start();
 include '../Database/connection_db.php';
 if (!isset($_SESSION['login'])) {
-    header('location:../signin.php');
+    header('location: userLoginSignup.php');
     exit;
 }
 ?>
@@ -18,7 +18,7 @@ if (!isset($_SESSION['login'])) {
 </head>
 <body>
     <?php
-    include 'profilenav.php';
+    include 'userbook/profilenav.php';
     ?>
 
     <div class="main_content">

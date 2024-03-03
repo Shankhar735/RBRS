@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 
 <html>
 <head>
-	<title>user form</title>
+	<title>User Login/Registration</title>
 	<link rel="stylesheet" type="text/css" href="userasset/userLoginSignupStyle.css">
 </head>
 <body>

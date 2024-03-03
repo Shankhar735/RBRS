@@ -24,8 +24,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
 
     if($validate) {
       if(move_uploaded_file($_FILES['cover']['tmp_name'], $coverTargetDirectory) && move_uploaded_file($_FILES['book']['tmp_name'], $bookTargetDirectory)){
-        $query = "INSERT INTO books (title, author, category, coverpage, filename) VALUES ('$title', '$author', '$category', '$uniqueCoverName', '$uniqueBookName')";
-        if(mysqli_query($conn, $query)) {
+        $query = "INSERT INTO books (title, author, category, coverpage, bookfile) VALUES ('$title', '$author', '$category', '$coverTargetDirectory', '$bookTargetDirectory')";
+                if(mysqli_query($conn, $query)) {
           header("Refresh:0");
         }
       }
@@ -80,7 +80,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST") {
         <td><?php echo $row['title']; ?> </td>
         <td><?php echo $row['author']; ?> </td>
         <td><?php echo $row['category']; ?> </td>
-        <td><img style="height: 80px; width: 110px;" src="books/BookCover/<?php echo $row['coverpage']; ?>"></td>
+        <td><img style="height: 80px; width: 110px;" src="<?php echo $row['coverpage']; ?>"></td>
         <td>
           <button>Edit</button>
           <button>Delete</button>
