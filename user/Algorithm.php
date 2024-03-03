@@ -49,10 +49,10 @@ function calculateJaccardSimilarity($text1, $text2)
 }
 
 // Path to the reference PDF file
-$referencePdfPath = 'C:/xampp/htdocs/RBRS/adminstrator/books/65254a82352c8_9f0d9b27071a8cf6.pdf';
+$referencePdfPath = '../adminstrator/books/65254a82352c8_9f0d9b27071a8cf6.pdf';
 
 // Directory containing other PDF files
-$pdfDirectory = 'C:/xampp/htdocs/RBRS/adminstrator/books';
+$pdfDirectory = '../adminstrator/books';
 
 try {
     // Extract text from the reference PDF
@@ -80,14 +80,11 @@ try {
 
     foreach ($similarityResults as $pdfFile => $similarity) {
         if(round($similarity * 100, 2) > 5){
-            echo "div class='demo'>
+            echo "<div class='demo'>
             <div class='items'>
                 <a href='".$pdfFile."'>
-                <img src='user/img/Holy-Bible.jpg' alt='No image found'>
-                <h1>Holy Bible</h1>
-                <p>shankar</p>
-                <p>hindu</p>
-                <p>The Bible is a sacred text in Christianity and is considered one of the most influential and widely read books in human history.</p>
+                <img src='img/Holy-Bible.jpg' alt='No image found'>
+                
                 </a>
             </div>";
         }
